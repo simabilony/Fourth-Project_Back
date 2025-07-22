@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->nullable();
+            $table->string('building')->nullable();
+            $table->string('damage')->nullable();
             $table->boolean('legal');
             $table->integer('numberOfFloors');
             $table->integer('numberOfFloorsViolating');
